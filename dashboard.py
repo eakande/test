@@ -106,6 +106,9 @@ model.score (X_train,y_train), model.score(X_test,y_test),model.oob_score_
 explainer = RegressionExplainer(model, X, y)
 
 
-ExplainerDashboard(explainer).run(2000)
+db= ExplainerDashboard(explainer)
+db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
 
-
+db = ExplainerDashboard.from_config("dashboard.yaml")
+app = db.app
+server = db.flask_server()
