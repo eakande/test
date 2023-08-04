@@ -106,6 +106,6 @@ model.score (X_train,y_train), model.score(X_test,y_test),model.oob_score_
 explainer = RegressionExplainer(model, X, y)
 
 
-ExplainerDashboard(explainer).run()
+ExplainerDashboard(explainer).run(2000)
 
 
