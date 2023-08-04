@@ -1,0 +1,17 @@
+dash>=2
+dash-bootstrap-components<1
+dash-auth
+explainerdashboard
+gunicorn==20.1.0
+jupyter_dash
+dtreeviz>=1.1.4
+numpy
+pandas>=1.4.0
+scikit-learn
+openpyxl
+shap>=0.37
+joblib
+oyaml
+click
+waitress
+flask_simplelogin
